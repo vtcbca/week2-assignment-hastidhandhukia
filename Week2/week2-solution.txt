@@ -1,0 +1,53 @@
+create table stud41
+(
+	id  primary key,
+	name  
+);
+
+create table stud_detail4141
+(
+	id references stud41(id),
+	city,
+	mobile
+);
+
+insert into stud41 values(1,"om");
+insert into stud41 values(2,"Sai");
+insert into stud41 values(3,"Ram");
+insert into stud41 values(4,"Radha");
+insert into stud41 values(5,"Krishna");
+insert into stud41 values(6,"Sita");
+insert into stud41 values(7,"Govinda");
+insert into stud41 values(8,"Priya");
+insert into stud41 values(9,"Kishan");
+insert into stud41 values(10,"Ganesh");
+
+insert into stud_detail41 values(1,"Surat",7567890934);
+insert into stud_detail41 values(2,"Bardoli",7654678345);
+insert into stud_detail41 values(3,"Vyara",3557656740);
+insert into stud_detail41 values(4,"Surat",7689045634);
+insert into stud_detail41 values(5,"Valod",9876543210);
+insert into stud_detail41 values(6,"Ahemdabad",6756876849);
+insert into stud_detail41 values(7,"vadodra",9080706789);
+insert into stud_detail41 values(8,"rajkot",5678903421);
+insert into stud_detail41 values(9,"junaghdh",6578903421);
+insert into stud_detail41 values(10,"Bharuch",9808767834);
+
+1.Display stud table record.
+->  select * from stud41;
+
+2.Display stud_detail41 table record.
+->  select * from stud_detail41;
+
+3.Display whose student come from the Surat City.
+->  select id,city,mobile from stud_detail41
+     where city="surat";
+
+4.Display student details whose city name start with 'B'.
+->  select id,city,mobilenumber from stud_detail41
+     where city like 'b_%';
+
+5.Update mobileno who are comming from 'Surat'.
+->  update stud_detali41 
+     SET mobile=9827576460,
+     where city="surat";
